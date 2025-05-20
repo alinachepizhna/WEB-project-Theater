@@ -1,4 +1,4 @@
-/* === Картка вистави === */
+
 .performance-card {
   display: flex;
   flex-direction: column;
@@ -12,14 +12,13 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-/* Ефект при наведенні */
 .performance-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 0 15px #ff0033, 0 0 30px #ff0033;
   border-color: #ff0033;
 }
 
-/* Зображення у картці */
+
 .performance-image {
   width: 100%;
   height: 480px;
@@ -28,31 +27,31 @@
   margin-bottom: 12px;
 }
 
-/* Заголовок вистави */
+
 .performance-info h3 {
   margin: 0 0 8px;
   font-size: 1.3rem;
   color: #ff0033;
 }
 
-/* Додаткова інформація (дата, місце тощо) */
+
 .performance-info p {
   margin: 4px 0;
   font-size: 0.95rem;
   color: #ccc;
 }
 
-/* Опис вистави */
+
 .performance-info .description {
   margin-top: 10px;
   font-size: 0.9rem;
   color: #aaa;
 }
-/* Темна тема — за замовчуванням */
+
 .buy-button {
   margin-top: 10px;
   padding: 8px 12px;
-  background-color: #ff3b3b; /* червоний */
+  background-color: #ff3b3b; 
   color: white;
   border: none;
   border-radius: 6px;
@@ -64,9 +63,8 @@
   background-color: #cc2f2f;
 }
 
-/* Світла тема — коли є клас .light */
 .light .buy-button {
-  background-color: #ff69b4; /* рожевий */
+  background-color: #ff69b4;
 }
 
 .light .buy-button:hover {
