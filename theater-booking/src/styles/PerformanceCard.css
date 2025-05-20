@@ -1,73 +1,50 @@
-.list-container {
-  padding: 20px;
-  background-color: #000; /* Темна тема — чорний */
-  min-height: 100vh;
-}
-
-/* Світла тема — рожевий фон */
-.App.light .list-container {
-  background-color: #ffeaf4;
-}
-
-.filters {
+/* === Картка вистави === */
+.performance-card {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 30px;
-  justify-content: center;
-}
-
-.search-input,
-.select-filter {
-  padding: 14px 18px;
-  font-size: 18px;
-  border-radius: 10px;
-  border: 1px solid #ff0033;
-  background-color: #1a1a1a;
-  color: #fff;
-  min-width: 250px;
+  flex-direction: column;
+  background-color: #111;
+  border: 2px solid #333;
+  border-radius: 12px;
+  padding: 20px;
   max-width: 300px;
-  box-shadow: 0 2px 6px rgba(255, 0, 0, 0.3);
-  transition: all 0.3s ease;
+  color: #fff;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-/* Світла тема — інпут і селект */
-.App.light .search-input,
-.App.light .select-filter {
-  background-color: #fff0f8;
-  border: 1px solid #ff69b4;
-  color: #4a0033;
-  box-shadow: 0 2px 6px rgba(255, 105, 180, 0.3);
-}
-
-.App.light .search-input:focus,
-.App.light .select-filter:focus {
-  box-shadow: 0 0 8px #ff69b4;
-  border-color: #ff69b4;
-}
-
-.search-input:focus,
-.select-filter:focus {
+/* Ефект при наведенні */
+.performance-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 15px #ff0033, 0 0 30px #ff0033;
   border-color: #ff0033;
-  outline: none;
-  box-shadow: 0 0 8px #ff0033;
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  justify-items: center;
+/* Зображення у картці */
+.performance-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
 }
 
-/* Адаптивність */
-@media (max-width: 1024px) {
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* Заголовок вистави */
+.performance-info h3 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+  color: #ff0033;
 }
-@media (max-width: 600px) {
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
+
+/* Додаткова інформація (дата, місце тощо) */
+.performance-info p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+/* Опис вистави */
+.performance-info .description {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #aaa;
 }

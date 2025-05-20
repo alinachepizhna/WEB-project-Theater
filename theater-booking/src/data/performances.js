@@ -8,7 +8,8 @@ const performances = [
     language: 'Українська',
     dates: ['2025-06-01', '2025-06-10', '2025-06-20'],
     description: 'Іконічна трагедія Вільяма Шекспіра про принца Данії.',
-    image: '/images/hamlet.jpg'
+    image: '/images/hamlet.jpg',
+    price: { min: 1200, max: 3200 }
   },
   {
     id: 2,
@@ -19,7 +20,8 @@ const performances = [
     language: 'Французька',
     dates: ['2025-06-05', '2025-06-12', '2025-06-26'],
     description: 'Епічна музична адаптація роману Віктора Гюго.',
-    image: '/images/les-miserables.jpg'
+    image: '/images/les-miserables.jpg',
+    price: { min: 500, max: 2000 }
   },
   {
     id: 3,
@@ -30,7 +32,8 @@ const performances = [
     language: 'Англійська',
     dates: ['2025-06-03', '2025-06-17', '2025-06-29'],
     description: 'Містична історія кохання в Паризькій опері.',
-    image: '/images/phantom.jpg'
+    image: '/images/phantom.jpg',
+    price: { min: 900, max: 2500 }
   },
   {
     id: 4,
@@ -41,7 +44,8 @@ const performances = [
     language: 'Англійська',
     dates: ['2025-06-06', '2025-06-13', '2025-06-20'],
     description: 'Трагічна історія американської мрії.',
-    image: '/images/salesman.jpg'
+    image: '/images/salesman.jpg',
+    price: { min: 300, max: 1300 }
   },
   {
     id: 5,
@@ -52,7 +56,8 @@ const performances = [
     language: 'Українська',
     dates: ['2025-06-08', '2025-06-15', '2025-06-22'],
     description: 'Психологічна драма про ілюзії, втрати та пристрасть.',
-    image: '/images/streetcar.jpg'
+    image: '/images/streetcar.jpg',
+    price: { min: 350, max: 1200 }
   },
   {
     id: 6,
@@ -63,7 +68,8 @@ const performances = [
     language: 'Англійська',
     dates: ['2025-06-07', '2025-06-14', '2025-06-21'],
     description: 'Дотепна сатира Оскара Вайлда.',
-    image: '/images/earnest.jpg'
+    image: '/images/earnest.jpg',
+    price: { min: 400, max: 1000 }
   },
   {
     id: 7,
@@ -74,7 +80,8 @@ const performances = [
     language: 'Українська',
     dates: ['2025-06-09', '2025-06-18', '2025-06-27'],
     description: 'Трагедія про владу, зраду і батьківську любов.',
-    image: '/images/lear.jpg'
+    image: '/images/lear.jpg',
+    price: { min: 600, max: 1600 }
   },
   {
     id: 8,
@@ -85,7 +92,8 @@ const performances = [
     language: 'Французька',
     dates: ['2025-06-11', '2025-06-16', '2025-06-23'],
     description: 'Філософська п’єса про сенс життя.',
-    image: '/images/godot.jpg'
+    image: '/images/godot.jpg',
+    price: { min: 200, max: 900 }
   },
   {
     id: 9,
@@ -96,7 +104,8 @@ const performances = [
     language: 'Англійська',
     dates: ['2025-06-04', '2025-06-19', '2025-06-28'],
     description: 'Трагедія про ревнощі та маніпуляції.',
-    image: '/images/othello.jpg'
+    image: '/images/othello.jpg',
+    price: { min: 500, max: 1400 }
   },
   {
     id: 10,
@@ -107,76 +116,81 @@ const performances = [
     language: 'Російська',
     dates: ['2025-06-02', '2025-06-15', '2025-06-30'],
     description: 'П’єса про мистецтво та розчарування.',
-    image: '/images/seagull.jpg'
+    image: '/images/seagull.jpg',
+    price: { min: 250, max: 1000 }
   },
- {
-  id: 11,
-  title: 'Макбет',
-  genre: 'Трагедія',
-  time: '19:00',
-  duration: 145,
-  language: 'Англійська',
-  dates: ['2025-06-03', '2025-06-12', '2025-06-24'],
-  description: 'Темна історія амбіцій та зради у Шотландії.',
-  image: '/images/macbeth.jpg'
-},
-{
-  id: 12,
-  title: 'Ромео і Джульєтта',
-  genre: 'Трагедія',
-  time: '17:45',
-  duration: 140,
-  language: 'Італійська',
-  dates: ['2025-06-06', '2025-06-17', '2025-06-25'],
-  description: 'Безсмертна історія кохання з трагічним фіналом.',
-  image: '/images/romeo.jpg'
-},
-{
-  id: 13,
-  title: 'Фігаро',
-  genre: 'Комедія',
-  time: '18:30',
-  duration: 125,
-  language: 'Французька',
-  dates: ['2025-06-05', '2025-06-14', '2025-06-26'],
-  description: 'Весела історія про хитрого слугу, який переграє шляхту.',
-  image: '/images/figaro.jpg'
-},
-{
-  id: 14,
-  title: 'Медея',
-  genre: 'Трагедія',
-  time: '20:15',
-  duration: 135,
-  language: 'Грецька',
-  dates: ['2025-06-08', '2025-06-20', '2025-06-29'],
-  description: 'Давньогрецька трагедія про кохання і помсту.',
-  image: '/images/medea.jpg'
-},
-{
-  id: 15,
-  title: 'Котка на розпеченому даху',
-  genre: 'Драма',
-  time: '19:30',
-  duration: 130,
-  language: 'Англійська',
-  dates: ['2025-06-07', '2025-06-16', '2025-06-30'],
-  description: 'Напружена драма про родинні та особисті конфлікти.',
-  image: '/images/cat.jpg'
-},
-{
-  id: 16,
-  title: 'Слуга двох панів',
-  genre: 'Комедія',
-  time: '17:00',
-  duration: 115,
-  language: 'Італійська',
-  dates: ['2025-06-04', '2025-06-13', '2025-06-23'],
-  description: 'Класична італійська комедія положень.',
-  image: '/images/servant.jpg'
-}
-
+  {
+    id: 11,
+    title: 'Макбет',
+    genre: 'Трагедія',
+    time: '19:00',
+    duration: 145,
+    language: 'Англійська',
+    dates: ['2025-06-03', '2025-06-12', '2025-06-24'],
+    description: 'Темна історія амбіцій та зради у Шотландії.',
+    image: '/images/macbeth.jpg',
+    price: { min: 700, max: 1700 }
+  },
+  {
+    id: 12,
+    title: 'Ромео і Джульєтта',
+    genre: 'Трагедія',
+    time: '17:45',
+    duration: 140,
+    language: 'Італійська',
+    dates: ['2025-06-06', '2025-06-17', '2025-06-25'],
+    description: 'Безсмертна історія кохання з трагічним фіналом.',
+    image: '/images/romeo.jpg',
+    price: { min: 1000, max: 2500 }
+  },
+  {
+    id: 13,
+    title: 'Фігаро',
+    genre: 'Комедія',
+    time: '18:30',
+    duration: 125,
+    language: 'Французька',
+    dates: ['2025-06-05', '2025-06-14', '2025-06-26'],
+    description: 'Весела історія про хитрого слугу, який переграє шляхту.',
+    image: '/images/figaro.jpg',
+    price: { min: 300, max: 900 }
+  },
+  {
+    id: 14,
+    title: 'Медея',
+    genre: 'Трагедія',
+    time: '20:15',
+    duration: 135,
+    language: 'Грецька',
+    dates: ['2025-06-08', '2025-06-20', '2025-06-29'],
+    description: 'Давньогрецька трагедія про кохання і помсту.',
+    image: '/images/medea.jpg',
+    price: { min: 350, max: 950 }
+  },
+  {
+    id: 15,
+    title: 'Котка на розпеченому даху',
+    genre: 'Драма',
+    time: '19:30',
+    duration: 130,
+    language: 'Англійська',
+    dates: ['2025-06-07', '2025-06-16', '2025-06-30'],
+    description: 'Напружена драма про родинні та особисті конфлікти.',
+    image: '/images/cat.jpg',
+    price: { min: 400, max: 1100 }
+  },
+  {
+    id: 16,
+    title: 'Слуга двох панів',
+    genre: 'Комедія',
+    time: '17:00',
+    duration: 115,
+    language: 'Італійська',
+    dates: ['2025-06-04', '2025-06-13', '2025-06-23'],
+    description: 'Класична італійська комедія положень.',
+    image: '/images/servant.jpg',
+    price: { min: 200, max: 800 }
+  }
 ];
-
 
 export default performances;

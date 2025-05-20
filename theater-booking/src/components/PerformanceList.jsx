@@ -9,6 +9,8 @@ const PerformanceList = ({ performances }) => {
   const [selectedLanguage, setSelectedLanguage] = useState('');
   const [minDuration, setMinDuration] = useState('');
   const [maxDuration, setMaxDuration] = useState('');
+  const [minPrice, setMinPrice] = useState('');
+  const [maxPrice, setMaxPrice] = useState('');
 
   const genres = ['Усі жанри', ...new Set(performances.map(p => p.genre))];
   const times = ['Усі часи', ...new Set(performances.map(p => p.time))];
@@ -20,7 +22,9 @@ const PerformanceList = ({ performances }) => {
     (selectedTime === '' || p.time === selectedTime) &&
     (selectedLanguage === '' || p.language === selectedLanguage) &&
     (minDuration === '' || p.duration >= parseInt(minDuration)) &&
-    (maxDuration === '' || p.duration <= parseInt(maxDuration))
+    (maxDuration === '' || p.duration <= parseInt(maxDuration)) &&
+    (minPrice === '' || p.price >= parseInt(minPrice)) &&
+    (maxPrice === '' || p.price <= parseInt(maxPrice))
   );
 
   return (
@@ -82,6 +86,21 @@ const PerformanceList = ({ performances }) => {
           placeholder="Макс. тривалість (хв)"
           value={maxDuration}
           onChange={(e) => setMaxDuration(e.target.value)}
+          className="duration-input"
+        />
+
+        <input
+          type="number"
+          placeholder="Мін. ціна (грн)"
+          value={minPrice}
+          onChange={(e) => setMinPrice(e.target.value)}
+          className="duration-input"
+        />
+        <input
+          type="number"
+          placeholder="Макс. ціна (грн)"
+          value={maxPrice}
+          onChange={(e) => setMaxPrice(e.target.value)}
           className="duration-input"
         />
       </div>
