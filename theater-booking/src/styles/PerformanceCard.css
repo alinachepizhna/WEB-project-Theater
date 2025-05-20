@@ -1,26 +1,51 @@
-.card {
-  background-color: #fff;
+.performance-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.2s;
-  width: 300px;
-}
-
-.card:hover {
-  transform: scale(1.03);
-}
-
-.card img {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
   width: 100%;
-  height: auto;
+  transition: transform 0.2s ease;
+  height: auto; /* <-- адаптивна висота */
 }
 
-.card-content {
-  padding: 16px;
+.performance-card:hover {
+  transform: translateY(-4px);
 }
 
-.card-content h2 {
+.performance-image {
+  width: 100%;
+  height: 420px; 
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+
+.performance-info h3 {
   margin: 0 0 8px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.performance-info p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.performance-info .description {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.performance-details {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
 }

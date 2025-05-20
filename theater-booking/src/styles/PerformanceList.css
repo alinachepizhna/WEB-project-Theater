@@ -2,18 +2,52 @@
   padding: 20px;
 }
 
-.search-input {
-  margin-bottom: 20px;
-  padding: 10px;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-.card-grid {
+.filters {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  margin-bottom: 30px;
   justify-content: center;
 }
+
+.search-input,
+.select-filter {
+  padding: 14px 18px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+  max-width: 260px;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-input:focus,
+.select-filter:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 карточки в ряд */
+  gap: 24px;
+  justify-items: center;
+  padding: 10px;
+}
+
+/* Адаптивність для планшетів */
+@media (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
