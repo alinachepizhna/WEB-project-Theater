@@ -117,7 +117,7 @@ const performances = [
     dates: ['2025-06-02', '2025-06-15', '2025-06-30'],
     description: 'П’єса про мистецтво та розчарування.',
     image: '/images/seagull.jpg',
-    price: { min: 250, max: 1000 }
+    price: { min: 50, max: 100 }
   },
   {
     id: 11,
@@ -129,7 +129,7 @@ const performances = [
     dates: ['2025-06-03', '2025-06-12', '2025-06-24'],
     description: 'Темна історія амбіцій та зради у Шотландії.',
     image: '/images/macbeth.jpg',
-    price: { min: 700, max: 1700 }
+    price: { min: 70, max: 170 }
   },
   {
     id: 12,
@@ -177,7 +177,7 @@ const performances = [
     dates: ['2025-06-07', '2025-06-16', '2025-06-30'],
     description: 'Напружена драма про родинні та особисті конфлікти.',
     image: '/images/cat.jpg',
-    price: { min: 400, max: 1100 }
+    price: { min: 40, max: 110 }
   },
   {
     id: 16,

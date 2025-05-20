@@ -12,7 +12,7 @@ const PerformanceCard = ({ performance }) => {
         <p><strong>Мова:</strong> {performance.language}</p>
         <p><strong>Тривалість:</strong> {performance.duration} хв</p>
         <p><strong>Дати:</strong> {performance.dates.join(', ')}</p>
-        <p><strong>Ціна:</strong> {performance.price.min}–{performance.price.max} грн</p>
+        <p>Ціна: від {performance.price.min} до {performance.price.max} грн</p>
         <p className="description">{performance.description}</p>
       </div>
     </div>
