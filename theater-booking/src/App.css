@@ -1,0 +1,64 @@
+/* === Базовий стиль кнопки === */
+.theme-toggle {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.theme-toggle::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+  transform: scale(0);
+  transition: transform 0.5s ease;
+  z-index: 0;
+}
+
+.theme-toggle:hover::before {
+  transform: scale(1);
+}
+
+/* === Світла тема (рожевий стиль) === */
+.App.light .theme-toggle {
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+}
+
+.App.light .theme-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(255, 105, 180, 0.6);
+}
+
+.App.light .theme-toggle:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 10px rgba(255, 105, 180, 0.4);
+}
+
+/* === Темна тема (чорно-червоний стиль) === */
+.App.dark .theme-toggle {
+  background: linear-gradient(135deg, #ff0033, #990000);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(255, 0, 51, 0.3);
+}
+
+.App.dark .theme-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(255, 0, 51, 0.5);
+}
+
+.App.dark .theme-toggle:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 10px rgba(255, 0, 51, 0.3);
+}

@@ -1,5 +1,11 @@
-.list-container {
-  padding: 20px;
+/* Темна тема */
+.App.dark .list-container {
+  background-color: #000;
+}
+
+/* Світла тема */
+.App.light .list-container {
+  background-color: #fff0f5; /* ніжно-рожевий, або можете замінити на #fff */
 }
 
 .filters {
@@ -13,41 +19,39 @@
 .search-input,
 .select-filter {
   padding: 14px 18px;
-  font-size: 16px;
+  font-size: 18px;
   border-radius: 10px;
-  border: 1px solid #ccc;
-  min-width: 200px;
-  max-width: 260px;
-  width: 100%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ff0033;
+  background-color: #1a1a1a;
+  color: #fff;
+  min-width: 250px;
+  max-width: 300px;
+  box-shadow: 0 2px 6px rgba(255, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 
 .search-input:focus,
 .select-filter:focus {
-  border-color: #007bff;
+  border-color: #ff0033;
   outline: none;
+  box-shadow: 0 0 8px #ff0033;
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 карточки в ряд */
-  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   justify-items: center;
-  padding: 10px;
 }
 
-/* Адаптивність для планшетів */
+/* Адаптивність */
 @media (max-width: 1024px) {
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-/* Адаптивність для мобільних */
 @media (max-width: 600px) {
   .card-grid {
     grid-template-columns: 1fr;
   }
 }
-

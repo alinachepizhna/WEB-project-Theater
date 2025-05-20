@@ -1,0 +1,197 @@
+/* === Загальні базові стилі === */
+.App.dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.App.light {
+  background-color: #fff0f5;
+  color: #333;
+}
+
+/* === Header === */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: inherit;
+  padding: 20px 30px;
+  border-bottom: 4px solid #ff0033;
+  flex-wrap: wrap;
+}
+
+.logo-block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  height: 160px;
+  object-fit: contain;
+  transition: 0.3s ease;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-family: Georgia, serif;
+  margin: 0;
+}
+
+/* Темна тема */
+.App.dark .title {
+  color: #fff;
+  text-shadow: 0 0 10px #ff0033;
+}
+
+.App.dark .logo {
+  filter: drop-shadow(0 0 15px #ff0033);
+}
+
+/* Світла тема */
+.App.light .title {
+  color: #cc0077;
+  text-shadow: 0 0 8px #ff99cc;
+}
+
+.App.light .logo {
+  filter: drop-shadow(0 0 15px #ff69b4);
+}
+
+/* === Світла тема з рожевими тонами === */
+.App.light {
+  background-color: #ffeaf4; /* ніжно-рожевий */
+  color: #4a0033;
+}
+
+/* Хедер */
+.App.light .header {
+  background-color: #ffeaf4;
+  border-bottom: 4px solid #ff69b4;
+}
+
+/* Заголовок */
+.App.light .title {
+  color: #cc0077;
+  text-shadow: 0 0 6px #ff99cc;
+}
+
+/* Логотип */
+.App.light .logo {
+  filter: drop-shadow(0 0 12px #ff99cc);
+}
+
+/* Кнопка теми */
+.App.light .theme-toggle {
+  border-color: #cc0077;
+  color: #cc0077;
+  background-color: transparent;
+}
+
+.App.light .theme-toggle:hover {
+  background-color: #cc0077;
+  color: #fff;
+}
+
+/* Пошук та фільтри */
+.App.light input,
+.App.light select {
+  background-color: #fff0f8;
+  border: 2px solid #ff69b4;
+  color: #4a0033;
+}
+
+.App.light input::placeholder {
+  color: #a04a70;
+}
+
+/* Картки вистав */
+.App.light .performance-card {
+  background-color: #fff;
+  border: 2px solid #ffc0cb;
+  transition: 0.3s ease;
+}
+
+.App.light .performance-card:hover {
+  box-shadow: 0 0 15px #ff69b4, 0 0 30px #ff69b4;
+  border-color: #ff69b4;
+}
+
+/* Текст у картках */
+.App.light .performance-info h3 {
+  color: #cc0077;
+}
+.App.light .performance-info {
+  color: #7a2a4a;
+}
+/* === Базовий стиль кнопки === */
+.theme-toggle {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Ефект сяйва при наведенні */
+.theme-toggle::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  transform: scale(0);
+  transition: transform 0.5s ease;
+  z-index: 0;
+}
+
+.theme-toggle:hover::before {
+  transform: scale(1);
+}
+
+/* === Загальні стилі для обох тем при наведенні та натисканні === */
+.theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+/* === Світла тема: рожевий стиль === */
+.App.light .theme-toggle {
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+}
+
+.App.light .theme-toggle:hover {
+  box-shadow: 0 6px 25px rgba(255, 105, 180, 0.6);
+}
+
+.App.light .theme-toggle:active {
+  box-shadow: 0 2px 10px rgba(255, 105, 180, 0.4);
+}
+
+/* === Темна тема: чорно-червоний стиль === */
+.App.dark .theme-toggle {
+  background: linear-gradient(135deg, #ff0033, #990000);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(255, 0, 51, 0.3);
+}
+
+.App.dark .theme-toggle:hover {
+  box-shadow: 0 6px 25px rgba(255, 0, 51, 0.5);
+}
+
+.App.dark .theme-toggle:active {
+  box-shadow: 0 2px 10px rgba(255, 0, 51, 0.3);
+}
+
