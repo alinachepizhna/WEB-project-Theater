@@ -1,25 +1,129 @@
+.theater-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.stage {
+  background: #1a252f;
+  color: #f0f4f8;
+  font-weight: 700;
+  padding: 14px 0;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  font-size: 20px;
+  letter-spacing: 1.2px;
+}
+
+.zone {
+  margin-bottom: 30px;
+}
+
+.zone-label {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
 .hall-grid {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 8px;
   align-items: center;
 }
 
 .row {
   display: flex;
-  gap: 8px;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
 }
 
 .seat {
-  width: 30px;
-  height: 30px;
-  background-color: #44c767; /* доступне місце */
-  border-radius: 5px;
+  width: 36px;
+  height: 36px;
+  background: #aeb6bf;
+  border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  border: 2px solid #85929e;
+  color: #1a252f;
+  font-weight: 600;
+}
+
+.seat:hover {
+  transform: scale(1.15);
+  background-color: #5d6d7e;
+  color: #f0f4f8;
+  border-color: #34495e;
 }
 
 .seat.selected {
-  background-color: #3366ff; /* вибране місце */
+  background: #2ecc71;
+  color: white;
+  font-weight: 700;
+  border-color: #27ae60;
+}
+
+
+.vip .seat {
+  background: #5b2c6f;
+  border-color: #4a235a;
+  color: #f8f9f9;
+}
+
+.vip .seat.selected {
+  background: #7d3c98;
+  border-color: #6c3483;
+}
+
+
+.lodge .seat {
+  background: #16a085;
+  border-color: #138d75;
+  color: #e0f7fa;
+}
+
+.lodge .seat.selected {
+  background: #138d75;
+  border-color: #0e6655;
+}
+
+
+.main .seat {
+  background: #566573;
+  border-color: #4a6073;
+  color: #d5dbdb;
+}
+
+.main .seat.selected {
+  background: #27ae60;
+  border-color: #229954;
+}
+
+
+.balcony .seat {
+  background: #e67e22;
+  border-color: #ca6f1e;
+  color: #faf3e0;
+}
+
+.balcony .seat.selected {
+  background: #d35400;
+  border-color: #a84300;
+}
+
+.selected-label {
+  font-size: 16px;
+  margin-top: 20px;
+  color: #1a252f;
+  font-weight: 600;
 }

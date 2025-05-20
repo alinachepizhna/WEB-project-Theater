@@ -48,3 +48,28 @@
   font-size: 0.9rem;
   color: #aaa;
 }
+/* Темна тема — за замовчуванням */
+.buy-button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #ff3b3b; /* червоний */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #cc2f2f;
+}
+
+/* Світла тема — коли є клас .light */
+.light .buy-button {
+  background-color: #ff69b4; /* рожевий */
+}
+
+.light .buy-button:hover {
+  background-color: #e754a3;
+}
+

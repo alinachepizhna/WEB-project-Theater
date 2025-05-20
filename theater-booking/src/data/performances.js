@@ -9,7 +9,13 @@ const performances = [
     dates: ['2025-06-01', '2025-06-10', '2025-06-20'],
     description: 'Іконічна трагедія Вільяма Шекспіра про принца Данії.',
     image: '/images/hamlet.jpg',
-    price: { min: 1200, max: 3200 }
+    price: { min: 1200, max: 3200 },
+    hallConfig: {
+      layout: 'semiCircle',
+      balconies: 2,
+      hasVip: true,
+      hasLodges: true
+    }
   },
   {
     id: 2,
@@ -21,7 +27,13 @@ const performances = [
     dates: ['2025-06-05', '2025-06-12', '2025-06-26'],
     description: 'Епічна музична адаптація роману Віктора Гюго.',
     image: '/images/les-miserables.jpg',
-    price: { min: 500, max: 2000 }
+    price: { min: 500, max: 2000 },
+    hallConfig: {
+      layout: 'semiCircle',
+      balconies: 3,
+      hasVip: true,
+      hasLodges: true
+    }
   },
   {
     id: 3,
@@ -33,7 +45,13 @@ const performances = [
     dates: ['2025-06-03', '2025-06-17', '2025-06-29'],
     description: 'Містична історія кохання в Паризькій опері.',
     image: '/images/phantom.jpg',
-    price: { min: 900, max: 2500 }
+    price: { min: 900, max: 2500 },
+    hallConfig: {
+      layout: 'semiCircle',
+      balconies: 2,
+      hasVip: true,
+      hasLodges: false
+    }
   },
   {
     id: 4,
@@ -45,7 +63,13 @@ const performances = [
     dates: ['2025-06-06', '2025-06-13', '2025-06-20'],
     description: 'Трагічна історія американської мрії.',
     image: '/images/salesman.jpg',
-    price: { min: 300, max: 1300 }
+    price: { min: 300, max: 1300 },
+    hallConfig: {
+      layout: 'rectangle',
+      balconies: 1,
+      hasVip: false,
+      hasLodges: false
+    }
   },
   {
     id: 5,
@@ -57,7 +81,13 @@ const performances = [
     dates: ['2025-06-08', '2025-06-15', '2025-06-22'],
     description: 'Психологічна драма про ілюзії, втрати та пристрасть.',
     image: '/images/streetcar.jpg',
-    price: { min: 350, max: 1200 }
+    price: { min: 350, max: 1200 },
+    hallConfig: {
+      layout: 'rectangle',
+      balconies: 2,
+      hasVip: false,
+      hasLodges: true
+    }
   },
   {
     id: 6,
@@ -69,7 +99,13 @@ const performances = [
     dates: ['2025-06-07', '2025-06-14', '2025-06-21'],
     description: 'Дотепна сатира Оскара Вайлда.',
     image: '/images/earnest.jpg',
-    price: { min: 400, max: 1000 }
+    price: { min: 400, max: 1000 },
+    hallConfig: {
+      layout: 'rectangle',
+      balconies: 1,
+      hasVip: false,
+      hasLodges: false
+    }
   },
   {
     id: 7,
@@ -81,7 +117,13 @@ const performances = [
     dates: ['2025-06-09', '2025-06-18', '2025-06-27'],
     description: 'Трагедія про владу, зраду і батьківську любов.',
     image: '/images/lear.jpg',
-    price: { min: 600, max: 1600 }
+    price: { min: 600, max: 1600 },
+    hallConfig: {
+      layout: 'semiCircle',
+      balconies: 2,
+      hasVip: true,
+      hasLodges: true
+    }
   },
   {
     id: 8,
@@ -93,7 +135,13 @@ const performances = [
     dates: ['2025-06-11', '2025-06-16', '2025-06-23'],
     description: 'Філософська п’єса про сенс життя.',
     image: '/images/godot.jpg',
-    price: { min: 200, max: 900 }
+    price: { min: 200, max: 900 },
+    hallConfig: {
+      layout: 'rectangle',
+      balconies: 1,
+      hasVip: false,
+      hasLodges: false
+    }
   },
   {
     id: 9,
@@ -105,7 +153,13 @@ const performances = [
     dates: ['2025-06-04', '2025-06-19', '2025-06-28'],
     description: 'Трагедія про ревнощі та маніпуляції.',
     image: '/images/othello.jpg',
-    price: { min: 500, max: 1400 }
+    price: { min: 500, max: 1400 },
+    hallConfig: {
+      layout: 'semiCircle',
+      balconies: 2,
+      hasVip: true,
+      hasLodges: false
+    }
   },
   {
     id: 10,
@@ -117,7 +171,13 @@ const performances = [
     dates: ['2025-06-02', '2025-06-15', '2025-06-30'],
     description: 'П’єса про мистецтво та розчарування.',
     image: '/images/seagull.jpg',
-    price: { min: 50, max: 100 }
+    price: { min: 50, max: 100 },
+    hallConfig: {
+      layout: 'rectangle',
+      balconies: 1,
+      hasVip: false,
+      hasLodges: false
+    }
   },
   {
     id: 11,
@@ -129,7 +189,13 @@ const performances = [
     dates: ['2025-06-03', '2025-06-12', '2025-06-24'],
     description: 'Темна історія амбіцій та зради у Шотландії.',
     image: '/images/macbeth.jpg',
-    price: { min: 70, max: 170 }
+    price: { min: 70, max: 170 },
+    hallConfig: {
+      layout: 'semiCircle',
+      balconies: 1,
+      hasVip: true,
+      hasLodges: false
+    }
   },
   {
     id: 12,
@@ -141,7 +207,13 @@ const performances = [
     dates: ['2025-06-06', '2025-06-17', '2025-06-25'],
     description: 'Безсмертна історія кохання з трагічним фіналом.',
     image: '/images/romeo.jpg',
-    price: { min: 1000, max: 2500 }
+    price: { min: 1000, max: 2500 },
+    hallConfig: {
+      layout: 'semiCircle',
+      balconies: 2,
+      hasVip: true,
+      hasLodges: true
+    }
   },
   {
     id: 13,
@@ -153,7 +225,13 @@ const performances = [
     dates: ['2025-06-05', '2025-06-14', '2025-06-26'],
     description: 'Весела історія про хитрого слугу, який переграє шляхту.',
     image: '/images/figaro.jpg',
-    price: { min: 300, max: 900 }
+    price: { min: 300, max: 900 },
+    hallConfig: {
+      layout: 'rectangle',
+      balconies: 1,
+      hasVip: false,
+      hasLodges: true
+    }
   },
   {
     id: 14,
@@ -165,7 +243,13 @@ const performances = [
     dates: ['2025-06-08', '2025-06-20', '2025-06-29'],
     description: 'Давньогрецька трагедія про кохання і помсту.',
     image: '/images/medea.jpg',
-    price: { min: 350, max: 950 }
+    price: { min: 350, max: 950 },
+    hallConfig: {
+      layout: 'semiCircle',
+      balconies: 1,
+      hasVip: true,
+      hasLodges: false
+    }
   },
   {
     id: 15,
@@ -177,7 +261,13 @@ const performances = [
     dates: ['2025-06-07', '2025-06-16', '2025-06-30'],
     description: 'Напружена драма про родинні та особисті конфлікти.',
     image: '/images/cat.jpg',
-    price: { min: 40, max: 110 }
+    price: { min: 40, max: 110 },
+    hallConfig: {
+      layout: 'rectangle',
+      balconies: 3,
+      hasVip: false,
+      hasLodges: false
+    }
   },
   {
     id: 16,
@@ -189,7 +279,13 @@ const performances = [
     dates: ['2025-06-04', '2025-06-13', '2025-06-23'],
     description: 'Класична італійська комедія положень.',
     image: '/images/servant.jpg',
-    price: { min: 200, max: 800 }
+    price: { min: 200, max: 800 },
+    hallConfig: {
+      layout: 'rectangle',
+      balconies: 1,
+      hasVip: false,
+      hasLodges: false
+    }
   }
 ];
 

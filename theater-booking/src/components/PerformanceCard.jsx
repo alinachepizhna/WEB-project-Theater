@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/PerformanceCard.css';
+
 
 const PerformanceCard = ({ performance }) => {
   return (
@@ -14,6 +16,9 @@ const PerformanceCard = ({ performance }) => {
         <p><strong>Дати:</strong> {performance.dates.join(', ')}</p>
         <p>Ціна: від {performance.price.min} до {performance.price.max} грн</p>
         <p className="description">{performance.description}</p>
+        <Link to={`/booking/${performance.id}`}>
+        <button className="buy-button">Придбати квитки</button>
+      </Link>
       </div>
     </div>
   );
