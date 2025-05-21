@@ -12,7 +12,7 @@ function TheaterHall({ performanceId, onSelectSeats }) {
   useEffect(() => {
     const booked = BookingService.getBookedSeats(performanceId);
     setBookedSeats(booked);
-    setSelectedSeats([]); // сброс выбора при смене performanceId
+    setSelectedSeats([]);
   }, [performanceId]);
 
   useEffect(() => {
