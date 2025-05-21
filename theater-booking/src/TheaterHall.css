@@ -229,3 +229,8 @@
   margin-right: 8px;
   border: 1px solid #333;
 }
+.seat.booked {
+  background-color: red;
+  color: white;
+  cursor: not-allowed;
+}
