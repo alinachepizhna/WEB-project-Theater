@@ -185,30 +185,45 @@ const styles = {
     flex: 1.5,
     borderLeft: '1px solid #ccc',
     paddingLeft: '16px',
-    maxHeight: '90vh',
-    overflowY: 'auto',
+    height: '100%',
+    overflow: 'visible',
+
     display: 'flex',
     flexDirection: 'column',
   },
   title: {
     fontSize: '1.2rem',
-    marginBottom: '10px',
+    marginBottom: '100px',
   },
   image: {
     width: '100%',
     maxWidth: '560px',
     height: 'auto',
-    borderRadius: '8px',
-    marginBottom: '12px',
+    borderRadius: '12px',
+    marginBottom: '16px',
     alignSelf: 'center',
     objectFit: 'cover',
+    boxShadow: '0 8px 16px rgba(0,0,0,0.15)',
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+    cursor: 'pointer',
+  },
+  imageHover: {
+    transform: 'scale(1.03)',
+    boxShadow: '0 12px 24px rgba(0,0,0,0.25)',
   },
   description: {
     whiteSpace: 'pre-line',
-    fontSize: '0.95rem',
-    lineHeight: '1.5',
+    fontSize: '1rem',
+    lineHeight: '1.6',
     color: '#2c3e50',
+    backgroundColor: '#f8f9fa',
+    padding: '12px 16px',
+    borderRadius: '8px',
+    boxShadow: 'inset 0 0 8px rgba(44, 62, 80, 0.1)',
+    transition: 'background-color 0.3s ease, color 0.3s ease',
+    userSelect: 'text',
   },
 };
+
 
 export default TheaterHall;

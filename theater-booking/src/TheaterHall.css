@@ -41,7 +41,7 @@
   display: grid;
   grid-auto-flow: column;
   justify-content: center;
-  gap: 6px; /* было 8px */
+  gap: 6px;
 }
 
 .seat {
@@ -60,6 +60,7 @@
   border: 2px solid #85929e;
   transition: all 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .seat:hover:not(.selected) {
@@ -75,6 +76,21 @@
   color: #fff;
   font-weight: 700;
   box-shadow: 0 0 10px 3px #27ae60cc;
+}
+
+.seat.selected:hover {
+  animation: pulseGlow 1.5s infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px 3px #27ae60cc;
+    transform: scale(1.1);
+  }
+  50% {
+    box-shadow: 0 0 20px 6px #27ae60ff;
+    transform: scale(1.15);
+  }
 }
 
 .vip .seat {
@@ -138,6 +154,94 @@
   text-align: center;
 }
 
+.seat-colors-info {
+  margin-bottom: 24px;
+  padding: 12px;
+  background-color: #f4f6f7;
+  border: 1px solid #d5d8dc;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.seat-colors-info h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.seat-colors-info ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.seat-colors-info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #2c3e50;
+}
+
+.seat-colors-info li div {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid #333;
+}
+
+.seat.booked {
+  background-color: red;
+  color: white;
+  cursor: not-allowed;
+}
+
+.seat.booked::after {
+  content: "✕";
+  position: absolute;
+  font-size: 1.2rem;
+  color: #fff;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.seat.booked:hover::after {
+  opacity: 1;
+}
+
+.seat.booked::before {
+  content: "";
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #b03a3a;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  pointer-events: none;
+}
+
+.seat.booked:hover::before {
+  content: "Забронировано";
+  opacity: 1;
+}
+
+.seat.selected.booked {
+  background-color: #b03a3a;
+  border-color: #7a2525;
+  box-shadow: 0 0 12px 4px #7a2525cc;
+  color: #ffe6e6;
+}
 
 @media (max-width: 600px) {
   .seat {
@@ -191,46 +295,4 @@
   .theater-container {
     gap: 30px;
   }
-}
-.seat-colors-info {
-  margin-bottom: 24px;
-  padding: 12px;
-  background-color: #f4f6f7;
-  border: 1px solid #d5d8dc;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-.seat-colors-info h3 {
-  font-size: 1rem;
-  margin-bottom: 10px;
-  color: #2c3e50;
-  text-align: center;
-}
-
-.seat-colors-info ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.seat-colors-info li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 6px;
-  font-size: 0.95rem;
-  color: #2c3e50;
-}
-
-.seat-colors-info li div {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  margin-right: 8px;
-  border: 1px solid #333;
-}
-.seat.booked {
-  background-color: red;
-  color: white;
-  cursor: not-allowed;
 }
